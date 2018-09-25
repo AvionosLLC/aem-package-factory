@@ -110,7 +110,7 @@ const PackageBuilder = function( Zip, xmlBuilder, filterFactory, definitionFacto
             version: options.version,
             filters: filters
         } ) ).end( createOptions ) );
-        zip.file( 'META-INF/vault/config.xml', fs.readFileSync( './templates/config.xml', 'utf-8' ) );
+        zip.file( 'META-INF/vault/config.xml', fs.readFileSync( __dirname + '/templates/config.xml', 'utf-8' ) );
 
         fs.writeFileSync( outputFile, zip.generate( {
             base64: false,

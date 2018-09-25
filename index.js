@@ -5,7 +5,7 @@ const ResourceBuilder = require( './resourceBuilder' );
 const PackageBuilder = require( './packageBuilder' );
 const filterFactory = require( './filterFactory' );
 const definitionFactory = require( './definitionFactory' );
-const propertiesFactory = require( '../propertiesFactory' );
+const propertiesFactory = require( './propertiesFactory' );
 
 module.exports = {
 
