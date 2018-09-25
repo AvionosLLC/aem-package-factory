@@ -113,7 +113,7 @@ describe( 'ResourceBuilder', () => {
 
     } );
 
-    it( 'Should allow indication of whether a property is multivalued', () => {
+    it.skip( 'Should allow indication of whether a property is multivalued', () => {
 
         const builder = new ResourceBuilder( 'name', 'primaryType' )
             .setProperty( 'newProperty', 'value', null, true )

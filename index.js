@@ -5,11 +5,12 @@ const ResourceBuilder = require( './resourceBuilder' );
 const PackageBuilder = require( './packageBuilder' );
 const filterFactory = require( './filterFactory' );
 const definitionFactory = require( './definitionFactory' );
+const propertiesFactory = require( '../propertiesFactory' );
 
 module.exports = {
 
     getPackageBuilder: function() {
-        return new PackageBuilder( Zip, xmlBuilder, filterFactory, definitionFactory );
+        return new PackageBuilder( Zip, xmlBuilder, filterFactory, definitionFactory, propertiesFactory );
     },
     ResourceBuilder
 

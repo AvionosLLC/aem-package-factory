@@ -22,14 +22,14 @@ const PackageBuilder = function( Zip, xmlBuilder, filterFactory, definitionFacto
             } );
         }
 
-        this.files[ path ] = resource;
+        files[ path ] = resource;
 
         return this;
 
     };
 
     this.addFilter = function( filterRoot ) {
-        this.filters.push( filterRoot );
+        filters.push( filterRoot );
         return this;
     };
 
@@ -85,7 +85,7 @@ const PackageBuilder = function( Zip, xmlBuilder, filterFactory, definitionFacto
 
         const zip = new Zip();
 
-        files.forEach( currentFilePath => {
+        Object.keys( files ).forEach( currentFilePath => {
             zip.file( `jcr_root/${currentFilePath}/.content.xml`, xmlBuilder.create( files[ currentFilePath ] ).end( createOptions ) );
         } );
 
@@ -120,3 +120,5 @@ const PackageBuilder = function( Zip, xmlBuilder, filterFactory, definitionFacto
     };
 
 };
+
+module.exports = PackageBuilder;
