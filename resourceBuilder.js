@@ -99,4 +99,8 @@ const ResourceBuilder = function( name, primaryType ) {
     };
 };
 
+ResourceBuilder.forPrimaryType = function( name, type ) {
+    return new ResourceBuilder( name, type );
+};
+
 module.exports = ResourceBuilder;

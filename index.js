@@ -9,7 +9,7 @@ const propertiesFactory = require( '../propertiesFactory' );
 
 module.exports = {
 
-    getPackageBuilder: function() {
+    get PackageBuilder() {
         return new PackageBuilder( Zip, xmlBuilder, filterFactory, definitionFactory, propertiesFactory );
     },
     ResourceBuilder

@@ -43,7 +43,7 @@ describe( 'Package Builder', () => {
             .setVersion( '2' )
             .setComment( 'Package Comment' )
             .setCreatedBy( 'Package Created By')
-            .addFile( '/tmp/avionos/value', ( new ResourceBuilder( 'a', 'nt:unstructured' ) ).setProperty( 'a', 'A' ).build() )
+            .addFile( '/tmp/avionos/value', ResourceBuilder.forPrimaryType( 'a', 'nt:unstructured' ).setProperty( 'a', 'A' ).build() )
             .build( './testPackage.zip' );
 
         // TODO: Actually inspect the package content in the test instead of relying on manual inspection
