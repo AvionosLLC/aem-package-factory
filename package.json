@@ -1,0 +1,28 @@
+{
+  "name": "aem-package-factory",
+  "version": "0.1.0",
+  "description": "A factory which transforms JSON configuration into an AEM zip package.  Useful for content migrations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "AEM",
+    "Migration",
+    "Package"
+  ],
+  "author": "Avionos LLC.",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "csvtojson": "^2.0.8",
+    "node-zip": "^1.1.1",
+    "xmlbuilder": "^10.0.0",
+    "yargs": "^12.0.2"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "should": "^13.2.3",
+    "should-sinon": "0.0.6",
+    "sinon": "^6.3.4"
+  }
+}
